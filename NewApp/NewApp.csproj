@@ -96,6 +96,7 @@
     <Compile Include="Bannan.xaml.cs">
       <DependentUpon>Bannan.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DatabazeLS.cs" />
     <Compile Include="DatabazeS.cs" />
     <Compile Include="Edit.xaml.cs">
       <DependentUpon>Edit.xaml</DependentUpon>
