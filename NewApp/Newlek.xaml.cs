@@ -61,6 +61,20 @@ namespace NewApp
             }
         }
 
+        private static DatabazeLS _datals;
+        public static DatabazeLS Datals
+        {
+            get
+            {
+                if (_datals == null)
+                {
+                    var fileHelper = new Helper();
+                    _datals = new DatabazeLS(fileHelper.GetLocalFilePath("VazabaLSSQLite.db3"));
+                }
+                return _datals;
+            }
+        }
+
         private void pre(object sender, TextCompositionEventArgs e)
         {
             Regex regex = new Regex("[^0-9]+");
@@ -85,17 +99,30 @@ namespace NewApp
             itemle.firma = m2.Text;
             Datal.SaveItemAsync2(itemle);
 
+            int idvazba = itemle.ID;
+
             string value = m3.Text;
-            // Split the string on line breaks.
-            // ... The return value from Split is a string array.
             string[] lines = Regex.Split(value, ",");
 
             foreach (string line in lines)
             {
+                Slozky itemslozky = new Slozky();                
                 itemslozky.slozenileku = line;
-                MessageBox.Show(line);
                 Dataslozka.SaveItemAsync3(itemslozky);
+                //long ID = Datals.GetLastID().Result;
+                int idslozeni = itemslozky.ID;
+
+                VazbaLS itemvazba = new VazbaLS();
+                itemvazba.slozeniID = idslozeni;
+                itemvazba.lekyID = idvazba;
+
+                //MessageBox.Show(Convert.ToString(idvazba) + " " + " LEK");
+
+               // MessageBox.Show(Convert.ToString(idslozeni) + " " + " SLOŽENÍ");
+                Datals.SaveItemAsync4(itemvazba);
+                //MessageBox.Show(line);
             }
+
             page1.Navigate(new ofiko(iteml));
         }
     }

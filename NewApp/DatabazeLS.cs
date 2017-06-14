@@ -26,6 +26,11 @@ namespace NewApp
         {
             return Database.QueryAsync<VazbaLS>("SELECT * FROM [VazbaLS] ");
         }
+       /* public async Task<long> GetLastID()
+        {
+            string sql = @"select last_insert_rowid()";
+            return await Database.ExecuteScalarAsync<long>(sql);
+        }*/
 
 
         public Task<int> SaveItemAsync4(VazbaLS item)
