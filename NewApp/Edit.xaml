@@ -1,0 +1,37 @@
+﻿<Page x:Class="NewApp.Edit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NewApp"
+      mc:Ignorable="d" 
+      Height="400" Width="550"
+      Title="Edit">
+
+    <Grid>
+        <Frame x:Name="editpage" NavigationUIVisibility="Hidden"/>
+        <TextBox x:Name="y1" PreviewTextInput="prf" HorizontalAlignment="Left" Height="23" Margin="93,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="x1" Content="Jméno:" HorizontalAlignment="Left" Margin="36,89,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="y2" PreviewTextInput="prf" HorizontalAlignment="Left" Height="23" Margin="93,129,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="x2" Content="Příjmení:" HorizontalAlignment="Left" Margin="36,129,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="y3" PreviewTextInput="prf" HorizontalAlignment="Left" Height="23" Margin="93,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="x3" Content="Alergie:" HorizontalAlignment="Left" Margin="36,169,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="x4" Content="Pohlaví:" HorizontalAlignment="Left" Margin="36,209,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.099,-3.167"/>
+        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="93,209,0,0" VerticalAlignment="Top" Width="100">
+            <ComboBoxItem x:Name="male" IsSelected="False">Muž</ComboBoxItem>
+            <ComboBoxItem x:Name="female" IsSelected="False">Žena</ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="x5" Content="Heslo:" HorizontalAlignment="Right" Margin="0,169,163,0" VerticalAlignment="Top" RenderTransformOrigin="-1.099,-3.167"/>
+        <TextBox x:Name="y5"  HorizontalAlignment="Right" Height="23" Margin="0,169,53,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="y6" PreviewTextInput="prf" HorizontalAlignment="Right" Height="23" Margin="0,209,53,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <Label x:Name="x6" Content="Léky: " HorizontalAlignment="Right" Margin="0,209,163,0" VerticalAlignment="Top"/>
+        <Label x:Name="x7" Content="Login:" HorizontalAlignment="Right" Margin="0,129,163,0" VerticalAlignment="Top" RenderTransformOrigin="-1.099,-3.167"/>
+        <TextBox x:Name="y7"  HorizontalAlignment="Right" Height="23" Margin="0,129,53,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="100"/>
+        <StackPanel Margin="0,245,0,0">
+            <Button x:Name="edit" Background="GreenYellow" Height="15" Content="Editovat" Click="edit_Click"/>
+            <Button x:Name="delete" Background="Red" Height="15" Content="Smazat" Click="delete_Click"/>
+            <Button x:Name="bac" Background="Yellow" Height="15" Content="Zpět" Click="bac_Click" FontFamily="Sitka Display"/>
+        </StackPanel>
+        <Label x:Name="editnadpis" Content="Editace zákazníka" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" FontFamily="Sitka Display"/>
+    </Grid>
+</Page>

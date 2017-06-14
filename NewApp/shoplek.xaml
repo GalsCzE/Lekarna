@@ -1,0 +1,25 @@
+﻿<Page x:Class="NewApp.shoplek"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NewApp"
+      mc:Ignorable="d" 
+      Height="400" Width="550"
+      Title="shoplek">
+
+    <Grid>
+        <Frame x:Name="shopleky" NavigationUIVisibility="Hidden"/>
+    <TextBox x:Name="h1" HorizontalAlignment="Left" Height="23" Margin="93,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+    <Label x:Name="g1" Content="Název :" HorizontalAlignment="Left" Margin="36,89,0,0" VerticalAlignment="Top"/>
+    <TextBox x:Name="h2"  HorizontalAlignment="Left" Height="23" Margin="371,89,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+    <Label x:Name="g2" Content="Firma :" HorizontalAlignment="Left" Margin="320,89,0,0" VerticalAlignment="Top"/>
+    <TextBox x:Name="h3"  HorizontalAlignment="Left" Height="23" Margin="181,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="290"/>
+    <Label x:Name="g3" Content="Složení :" HorizontalAlignment="Left" Margin="117,150,0,0" VerticalAlignment="Top"/>
+    <StackPanel Margin="0,245,0,0">
+            <Button x:Name="addlek" Background="CornflowerBlue" Height="15" Content="Přidat lék do košíku" Click="addlek_Click"/>
+            <Button x:Name="backlek" Background="Yellow" Height="15" Content="Zpět" Click="backlek_Click"/>
+    </StackPanel>
+    <Label x:Name="editlenadpis" Content="Databáze léků" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" FontFamily="Sitka Display"/>
+    </Grid>
+</Page>
