@@ -121,5 +121,10 @@ namespace NewApp
         {
             page1.Navigate(new Lewk(item, editpage));
         }
+
+        private void alerg_Click(object sender, RoutedEventArgs e)
+        {
+            page1.Navigate(new Alegf(item, editpage));
+        }
     }
 }

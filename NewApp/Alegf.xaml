@@ -9,6 +9,8 @@
       Title="Alegf">
 
     <Grid>
-        
+        <Frame x:Name="page8" NavigationUIVisibility="Hidden"/>
+        <ListView x:Name="ListView" SelectionChanged="ToDoItemsListView_OnSelectionChanged" HorizontalAlignment="Left" Height="276" Margin="20,10,0,0" VerticalAlignment="Top" Width="460"/>
+        <Button x:Name="bi" Content="Zpět" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="73" Margin="221,0,0,75" Click="bi_Click" />
     </Grid>
 </Page>

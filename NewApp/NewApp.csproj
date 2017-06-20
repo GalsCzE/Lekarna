@@ -132,6 +132,9 @@
       <DependentUpon>shoplek.xaml</DependentUpon>
     </Compile>
     <Compile Include="Slozky.cs" />
+    <Compile Include="USEALERGE.xaml.cs">
+      <DependentUpon>USEALERGE.xaml</DependentUpon>
+    </Compile>
     <Compile Include="USELEK.xaml.cs">
       <DependentUpon>USELEK.xaml</DependentUpon>
     </Compile>
@@ -190,6 +193,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="shoplek.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="USEALERGE.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
