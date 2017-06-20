@@ -110,7 +110,7 @@ namespace NewApp
                 itemslozky.slozenileku = line;
                 Dataslozka.SaveItemAsync3(itemslozky);
                 //long ID = Datals.GetLastID().Result;
-                int idslozeni = itemslozky.ID;
+                /*int idslozeni = itemslozky.ID;
 
                 VazbaLS itemvazba = new VazbaLS();
                 itemvazba.slozeniID = idslozeni;
@@ -119,7 +119,7 @@ namespace NewApp
                 //MessageBox.Show(Convert.ToString(idvazba) + " " + " LEK");
 
                // MessageBox.Show(Convert.ToString(idslozeni) + " " + " SLOŽENÍ");
-                Datals.SaveItemAsync4(itemvazba);
+                Datals.SaveItemAsync4(itemvazba);*/
                 //MessageBox.Show(line);
             }
 

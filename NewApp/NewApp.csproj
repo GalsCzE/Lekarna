@@ -92,6 +92,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Alegf.xaml.cs">
+      <DependentUpon>Alegf.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Alergeny.cs" />
     <Compile Include="Bannan.xaml.cs">
       <DependentUpon>Bannan.xaml</DependentUpon>
@@ -109,6 +112,9 @@
     </Compile>
     <Compile Include="Helper.cs" />
     <Compile Include="Leky.cs" />
+    <Compile Include="Lewk.xaml.cs">
+      <DependentUpon>Lewk.xaml</DependentUpon>
+    </Compile>
     <Compile Include="lidi.cs" />
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
@@ -126,10 +132,17 @@
       <DependentUpon>shoplek.xaml</DependentUpon>
     </Compile>
     <Compile Include="Slozky.cs" />
+    <Compile Include="USELEK.xaml.cs">
+      <DependentUpon>USELEK.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VazabaZA.cs" />
     <Compile Include="VazbaLS.cs" />
     <Compile Include="VazbaZL.cs" />
     <Compile Include="Zakaznik.cs" />
+    <Page Include="Alegf.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Bannan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -139,6 +152,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EditL.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lewk.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -173,6 +190,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="shoplek.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="USELEK.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

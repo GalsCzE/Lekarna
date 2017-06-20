@@ -38,7 +38,6 @@ namespace NewApp
             y3.Text = item.alergie;
             y5.Text = item.heslo;
             y7.Text = item.login;
-            y6.Text = item.lekek;
 
             if (item.pohlavi == 1)
             {
@@ -76,7 +75,6 @@ namespace NewApp
             itemqw.alergie = y3.Text;
             itemqw.heslo = y5.Text;
             itemqw.login = y7.Text;
-            itemqw.lekek = y6.Text;
             itemqw.opravneni = oprav;
             if (male.IsSelected)
             {
@@ -117,6 +115,11 @@ namespace NewApp
         {
             Regex regex = new Regex("[^A-Ža-ž]+");
             e.Handled = regex.IsMatch(e.Text);
+        }
+
+        private void lekw_Click(object sender, RoutedEventArgs e)
+        {
+            page1.Navigate(new Lewk(item, editpage));
         }
     }
 }

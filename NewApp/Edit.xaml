@@ -23,7 +23,7 @@
         </ComboBox>
         <Label x:Name="x5" Content="Heslo:" HorizontalAlignment="Right" Margin="0,169,163,0" VerticalAlignment="Top" RenderTransformOrigin="-1.099,-3.167"/>
         <TextBox x:Name="y5"  HorizontalAlignment="Right" Height="23" Margin="0,169,53,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="100"/>
-        <TextBox x:Name="y6" PreviewTextInput="prf" HorizontalAlignment="Right" Height="23" Margin="0,209,53,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="lekw" Content="Lek" Click="lekw_Click" Margin="397,212,53,169"/>
         <Label x:Name="x6" Content="Léky: " HorizontalAlignment="Right" Margin="0,209,163,0" VerticalAlignment="Top"/>
         <Label x:Name="x7" Content="Login:" HorizontalAlignment="Right" Margin="0,129,163,0" VerticalAlignment="Top" RenderTransformOrigin="-1.099,-3.167"/>
         <TextBox x:Name="y7"  HorizontalAlignment="Right" Height="23" Margin="0,129,53,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="100"/>

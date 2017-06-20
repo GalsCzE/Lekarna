@@ -24,7 +24,7 @@ namespace NewApp
     {
         Zakaznik item = new Zakaznik();
         Frame page1;
-        public Bannan(Zakaznik i,Frame pa)
+        public Bannan(Zakaznik i, Frame pa)
         {
             InitializeComponent();
             item = i;
@@ -42,6 +42,34 @@ namespace NewApp
                     _data = new DatabazeZ(fileHelper.GetLocalFilePath("ZakaznikSQLite.db3"));
                 }
                 return _data;
+            }
+        }
+
+        private static DatabazeA _dataA;
+        public static DatabazeA DataA
+        {
+            get
+            {
+                if (_dataA == null)
+                {
+                    var fileHelper = new Helper();
+                    _dataA = new DatabazeA(fileHelper.GetLocalFilePath("AlergenySQLite.db3"));
+                }
+                return _dataA;
+            }
+        }
+
+        private static DatabazeZA _dataZA;
+        public static DatabazeZA DataZA
+        {
+            get
+            {
+                if (_dataZA == null)
+                {
+                    var fileHelper = new Helper();
+                    _dataZA = new DatabazeZA(fileHelper.GetLocalFilePath("VazabaZASQLite.db3"));
+                }
+                return _dataZA;
             }
         }
 
@@ -83,8 +111,32 @@ namespace NewApp
                     iteme.pohlavi = 2;
                 }
 
+                int idzaka = iteme.ID;
+
                 Data.SaveItemAsync(iteme);
                 page1.Navigate(new ofiko(item));
+
+                /*string value = t3.Text;
+                string[] lines = Regex.Split(value, ",");
+
+                foreach (string line in lines)
+                {
+                    Alergeny itemalergeny = new Alergeny();
+                    itemalergeny.alergen = line;
+                    DataA.SaveItemAsync5(itemalergeny);
+                    //long ID = Datals.GetLastID().Result;
+                    /*int idaler = itemalergeny.ID;
+
+                    VazabaZA itemvazbaza = new VazabaZA();
+                    itemvazbaza.alergieID = idaler;
+                    itemvazbaza.zakaznikID = idzaka;
+
+                    //MessageBox.Show(Convert.ToString(idvazba) + " " + " LEK");
+
+                    // MessageBox.Show(Convert.ToString(idslozeni) + " " + " SLOŽENÍ");
+                    DataZA.SaveItemAsync7(itemvazbaza);
+                    //MessageBox.Show(line);
+                }*/
             }
             else
             {
