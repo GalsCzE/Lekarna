@@ -96,8 +96,11 @@
     <Compile Include="Bannan.xaml.cs">
       <DependentUpon>Bannan.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DatabazeA.cs" />
     <Compile Include="DatabazeLS.cs" />
     <Compile Include="DatabazeS.cs" />
+    <Compile Include="DatabazeZA.cs" />
+    <Compile Include="DatabazeZL.cs" />
     <Compile Include="Edit.xaml.cs">
       <DependentUpon>Edit.xaml</DependentUpon>
     </Compile>
@@ -123,6 +126,7 @@
       <DependentUpon>shoplek.xaml</DependentUpon>
     </Compile>
     <Compile Include="Slozky.cs" />
+    <Compile Include="VazabaZA.cs" />
     <Compile Include="VazbaLS.cs" />
     <Compile Include="VazbaZL.cs" />
     <Compile Include="Zakaznik.cs" />
