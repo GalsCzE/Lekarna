@@ -24,6 +24,7 @@ namespace NewApp
     {
         Zakaznik itemzz;
         Frame page2;
+        List<Zakaznik> userz;
         ObservableCollection<Leky> itemsFromDBLe;
         public Lewk(Zakaznik a, Frame fa)
         {
@@ -74,7 +75,7 @@ namespace NewApp
 
         private void be_Click(object sender, RoutedEventArgs e)
         {
-            page6.Navigate(new Edit(itemzz,page6));
+            page6.Navigate(new ofiko(userz, itemzz));
             ListView.Visibility = Visibility.Hidden;
             be.Visibility = Visibility.Hidden;
         }

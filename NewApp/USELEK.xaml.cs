@@ -34,6 +34,15 @@ namespace NewApp
             m2.Text = itemll.firma;
         }
 
+        public USELEK(Zakaznik we,Frame ve)
+        {
+            InitializeComponent();
+            itemzz2 = we;
+            page2 = ve;
+            m1.Text = itemll.nazev;
+            m2.Text = itemll.firma;
+        }
+
         private static DatabazeZL _dataZL;
         public static DatabazeZL DataZL
         {
@@ -66,12 +75,12 @@ namespace NewApp
             itemv.lekID = itemll.ID;
             itemv.zakaznikID = itemzz2.ID;
             DataZL.SaveItemAsync6(itemv);
-            page2.Navigate(new Edit(itemzz2, page2));
+            page2.Navigate(new Lewk(itemzz2, page2));
         }
 
         private void bal_Click(object sender, RoutedEventArgs e)
         {
-            page2.Navigate(new Edit(itemzz2,page2));
+            page2.Navigate(new Lewk(itemzz2,page2));
         }
     }
 }

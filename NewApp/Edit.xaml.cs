@@ -35,7 +35,6 @@ namespace NewApp
             page1 = po;
             y1.Text = item.jmeno;
             y2.Text = item.prijmeni;
-            y3.Text = item.alergie;
             y5.Text = item.heslo;
             y7.Text = item.login;
 
@@ -72,7 +71,6 @@ namespace NewApp
             itemqw.ID = id;
             itemqw.jmeno = y1.Text;
             itemqw.prijmeni = y2.Text;
-            itemqw.alergie = y3.Text;
             itemqw.heslo = y5.Text;
             itemqw.login = y7.Text;
             itemqw.opravneni = oprav;
@@ -115,16 +113,6 @@ namespace NewApp
         {
             Regex regex = new Regex("[^A-Ža-ž]+");
             e.Handled = regex.IsMatch(e.Text);
-        }
-
-        private void lekw_Click(object sender, RoutedEventArgs e)
-        {
-            page1.Navigate(new Lewk(item, editpage));
-        }
-
-        private void alerg_Click(object sender, RoutedEventArgs e)
-        {
-            page1.Navigate(new Alegf(item, editpage));
         }
     }
 }

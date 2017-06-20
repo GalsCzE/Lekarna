@@ -22,9 +22,9 @@ namespace NewApp
             return Database.Table<VazbaZL>().ToListAsync();
         }
         // Query using SQL query string
-        public Task<List<VazbaZL>> GetItemsNotDoneAsync6()
+        public Task<List<VazbaZL>> GetItemsNotDoneAsync6(int item)
         {
-            return Database.QueryAsync<VazbaZL>("SELECT * FROM [VazbaZL] ");
+            return Database.QueryAsync<VazbaZL>("SELECT * FROM [VazbaZL] WHERE [zakaznikID] = " + item);
         }
 
 

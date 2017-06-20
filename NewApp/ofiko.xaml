@@ -26,7 +26,7 @@
                     <Label x:Name="l1" Content="Jméno:" HorizontalAlignment="Left" Margin="36,-25,0,0" VerticalAlignment="Top"/>
                     <TextBox x:Name="t2" PreviewTextInput="prf" HorizontalAlignment="Left" Height="23" Margin="93,5,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="100"/>
                     <Label x:Name="l2" Content="Příjmení:" HorizontalAlignment="Left" Margin="36,-25,0,0" VerticalAlignment="Top"/>
-                    <TextBox x:Name="t3" PreviewTextInput="prf" HorizontalAlignment="Left" Height="23" Margin="93,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="100"/>
+                    <Button x:Name="alerge" Width="100" Content="Alergen" Click="alerge_Click" HorizontalAlignment="Left" Margin="93,5,0,0"/>
                     <Label x:Name="l3" Content="Alergie:" HorizontalAlignment="Left" Margin="36,-25,0,0" VerticalAlignment="Top"/>
                     <Label x:Name="l4" Content="Pohlaví:" HorizontalAlignment="Left" Margin="36,5,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.099,-3.167"/>
                     <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="93,-25,0,0" VerticalAlignment="Top" Width="100">

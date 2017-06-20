@@ -14,17 +14,13 @@
         <Label x:Name="x1" Content="Jméno:" HorizontalAlignment="Left" Margin="36,89,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="y2" PreviewTextInput="prf" HorizontalAlignment="Left" Height="23" Margin="93,129,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="100"/>
         <Label x:Name="x2" Content="Příjmení:" HorizontalAlignment="Left" Margin="36,129,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="alerg" Content="Alergen" Click="alerg_Click" Margin="93,172,357,209"/>
-        <Label x:Name="x3" Content="Alergie:" HorizontalAlignment="Left" Margin="36,169,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="x4" Content="Pohlaví:" HorizontalAlignment="Left" Margin="36,209,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.099,-3.167"/>
-        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="93,209,0,0" VerticalAlignment="Top" Width="100">
+        <Label x:Name="x4" Content="Pohlaví:" HorizontalAlignment="Left" Margin="32,170,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.099,-3.167"/>
+        <ComboBox x:Name="comboBox2" HorizontalAlignment="Left" Margin="93,170,0,0" VerticalAlignment="Top" Width="100">
             <ComboBoxItem x:Name="male" IsSelected="False">Muž</ComboBoxItem>
             <ComboBoxItem x:Name="female" IsSelected="False">Žena</ComboBoxItem>
         </ComboBox>
         <Label x:Name="x5" Content="Heslo:" HorizontalAlignment="Right" Margin="0,169,163,0" VerticalAlignment="Top" RenderTransformOrigin="-1.099,-3.167"/>
         <TextBox x:Name="y5"  HorizontalAlignment="Right" Height="23" Margin="0,169,53,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="100"/>
-        <Button x:Name="lekw" Content="Lek" Click="lekw_Click" Margin="397,212,53,169"/>
-        <Label x:Name="x6" Content="Léky: " HorizontalAlignment="Right" Margin="0,209,163,0" VerticalAlignment="Top"/>
         <Label x:Name="x7" Content="Login:" HorizontalAlignment="Right" Margin="0,129,163,0" VerticalAlignment="Top" RenderTransformOrigin="-1.099,-3.167"/>
         <TextBox x:Name="y7"  HorizontalAlignment="Right" Height="23" Margin="0,129,53,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="100"/>
         <StackPanel Margin="0,245,0,0">

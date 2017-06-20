@@ -52,12 +52,12 @@ namespace NewApp
             itemve.alergieID = itempp.ID;
             itemve.zakaznikID = itemss2.ID;
             DataZA.SaveItemAsync7(itemve);
-            page3.Navigate(new Edit(itemss2, page3));
+            page3.Navigate(new Lewk(itemss2, page3));
         }
 
         private void bao_Click(object sender, RoutedEventArgs e)
         {
-            page3.Navigate(new Edit(itemss2, page3));
+            page3.Navigate(new Lewk(itemss2, page3));
         }
     }
 }

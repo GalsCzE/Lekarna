@@ -22,9 +22,9 @@ namespace NewApp
             return Database.Table<Leky>().ToListAsync();
         }
         // Query using SQL query string
-        public Task<List<Leky>> GetItemsNotDoneAsync2()
+        public Task<List<Leky>> GetItemsNotDoneAsync2(int item)
         {
-            return Database.QueryAsync<Leky>("SELECT * FROM [Leky] ");
+            return Database.QueryAsync<Leky>("SELECT * FROM [VazbaZL] WHERE [ID] = " + item);
         }
 
 

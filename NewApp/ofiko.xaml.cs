@@ -25,12 +25,15 @@ namespace NewApp
     {
         ObservableCollection<Zakaznik> itemsFromDB;
         ObservableCollection<Leky> itemsFromDBL;
+        ObservableCollection<VazbaZL> itemsFromDBZL;
         Zakaznik item = new Zakaznik();
+        Zakaznik itempp;
         Leky iteml = new Leky();
         List<Zakaznik> userk = new List<Zakaznik>();
         public int lel;
         int ib;
         string oprav2;
+        int bbe;
         public ofiko(Leky iteml)
         {
             InitializeComponent();
@@ -46,6 +49,7 @@ namespace NewApp
         public ofiko(List<Zakaznik> j, Zakaznik u)
         {
             InitializeComponent();
+            itempp = u;
             userk = j;
             //int x = Int32.Parse(u.opravneni);
             if (u.opravneni == "1")
@@ -55,7 +59,6 @@ namespace NewApp
                 ib = u.ID;
                 t1.Text = u.jmeno;
                 t2.Text = u.prijmeni;
-                t3.Text = u.alergie;
                 t5.Text = u.login;
                 if (u.pohlavi == 1)
                 {
@@ -66,15 +69,21 @@ namespace NewApp
                     female.IsSelected = true;
                 }
                 t6.Text = u.heslo;
-                //t7.Text = u.lekek;
                 oprav2 = u.opravneni;
 
-               /* userk = Data.GetItemsAsync().Result;
-                foreach (Zakaznik i in userk)
+                itemsFromDBZL = new ObservableCollection<VazbaZL>(DataZL.GetItemsNotDoneAsync6(ib).Result);
+                Debug.WriteLine(itemsFromDBZL.Count);
+                foreach (VazbaZL todoItema in itemsFromDBZL)
                 {
-                    ib = i.ID;
-                    MessageBox.Show(ib.ToString());
-                }*/
+                    if (todoItema.zakaznikID == ib)
+                    {
+                        bbe = todoItema.lekID;
+                        Debug.WriteLine(todoItema);
+                    }
+                }
+
+                ListView.ItemsSource = itemsFromDBL;
+
             }
             else if (u.opravneni == "2")
             {
@@ -93,6 +102,20 @@ namespace NewApp
                     _datal = new DatabazeL(fileHelper.GetLocalFilePath("LekySQLite.db3"));
                 }
                 return _datal;
+            }
+        }
+
+        private static DatabazeZL _dataZL;
+        public static DatabazeZL DataZL
+        {
+            get
+            {
+                if (_dataZL == null)
+                {
+                    var fileHelper = new Helper();
+                    _dataZL = new DatabazeZL(fileHelper.GetLocalFilePath("VazabaZLSQLite.db3"));
+                }
+                return _dataZL;
             }
         }
 
@@ -229,7 +252,6 @@ namespace NewApp
             kek.ID = ib;
             kek.jmeno = t1.Text;
             kek.prijmeni = t2.Text;
-            kek.alergie = t3.Text;
             kek.heslo = t6.Text;
             kek.login = t5.Text;
             //kek.lekek = t7.Text;
@@ -251,11 +273,22 @@ namespace NewApp
 
         private void shop_Click(object sender, RoutedEventArgs e)
         {
-            page1.Navigate(new Shop(page1,userk,item));
+            page1.Navigate(new Lewk(itempp,page1));
             stack1.Visibility = Visibility.Hidden;
             stack2.Visibility = Visibility.Hidden;
             clovek.Visibility = Visibility.Hidden;
             medik.Visibility = Visibility.Hidden;
+        }
+
+        private void ToDoItemsListView2_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Leky todoItema = (Leky)ListViews.SelectedItems[0];
+            page1.Navigate(new USELEK(itempp, page1));
+        }
+
+        private void alerge_Click(object sender, RoutedEventArgs e)
+        {
+            page1.Navigate(new Alegf(itempp, page1));
         }
     }
 }

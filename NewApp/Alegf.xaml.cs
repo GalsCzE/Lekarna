@@ -24,6 +24,7 @@ namespace NewApp
     {
         Zakaznik itemss;
         Frame page3;
+        List<Zakaznik> users;
         ObservableCollection<Slozky> itemsFromDBAl;
         public Alegf(Zakaznik m, Frame ma)
         {
@@ -73,7 +74,7 @@ namespace NewApp
 
         private void bi_Click(object sender, RoutedEventArgs e)
         {
-            page8.Navigate(new Edit(itemss, page8));
+            page8.Navigate(new ofiko(users, itemss));
             ListView.Visibility = Visibility.Hidden;
             bi.Visibility = Visibility.Hidden;
         }
